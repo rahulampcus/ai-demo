@@ -6,7 +6,7 @@ import { ImageIcon, MessageSquare, ArrowRight, Users, Clock, Star } from "lucide
 const services = [
   {
     id: 1,
-    title: "Image to Text",
+    title: "Generate your application",
     description: "Extract text from images using advanced OCR technology. Support for multiple languages and formats.",
     icon: ImageIcon,
     status: "Active",

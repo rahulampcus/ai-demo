@@ -11,7 +11,7 @@ import {
   FileText,
   LogOut,
   Bell,
-} from "lucide-react"
+} from "lucide-react";
 import {
   Sidebar,
   SidebarContent,
@@ -24,9 +24,14 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarSeparator,
-} from "@/components/ui/sidebar"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
+} from "@/components/ui/sidebar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 // Menu items for navigation
 const items = [
@@ -36,41 +41,16 @@ const items = [
     icon: Home,
   },
   {
-    title: "Services",
-    url: "#",
-    icon: BarChart3,
-  },
-  {
-    title: "Analytics",
-    url: "#",
-    icon: BarChart3,
-  },
-  {
-    title: "Messages",
-    url: "#",
-    icon: Inbox,
-  },
-  {
-    title: "Calendar",
-    url: "#",
-    icon: Calendar,
-  },
-  {
-    title: "Search",
-    url: "#",
-    icon: Search,
-  },
-  {
     title: "Documents",
     url: "#",
     icon: FileText,
   },
-]
+];
 
 // Service items
 const serviceItems = [
   {
-    title: "Image to Text",
+    title: "Generate Application",
     url: "#",
     icon: ImageIcon,
   },
@@ -79,7 +59,7 @@ const serviceItems = [
     url: "#",
     icon: MessageSquare,
   },
-]
+];
 
 export function AppSidebar() {
   return (
@@ -96,7 +76,9 @@ export function AppSidebar() {
                   <span className="truncate font-semibold bg-gradient-to-r from-theme-orange-600 to-theme-yellow-600 bg-clip-text text-transparent">
                     AI Services
                   </span>
-                  <span className="truncate text-xs text-muted-foreground">Dashboard</span>
+                  <span className="truncate text-xs text-muted-foreground">
+                    Dashboard
+                  </span>
                 </div>
               </a>
             </SidebarMenuButton>
@@ -145,7 +127,7 @@ export function AppSidebar() {
 
         <SidebarSeparator />
 
-        <SidebarGroup>
+        {/* <SidebarGroup>
           <SidebarGroupLabel>Account</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
@@ -159,7 +141,7 @@ export function AppSidebar() {
               </SidebarMenuItem>
             </SidebarMenu>
           </SidebarGroupContent>
-        </SidebarGroup>
+        </SidebarGroup> */}
       </SidebarContent>
 
       <SidebarFooter>
@@ -172,14 +154,19 @@ export function AppSidebar() {
                   className="data-[state=open]:bg-gradient-to-r data-[state=open]:from-theme-orange-100 data-[state=open]:to-theme-yellow-100 data-[state=open]:text-theme-orange-900"
                 >
                   <Avatar className="h-8 w-8 rounded-lg ring-2 ring-theme-orange-200">
-                    <AvatarImage src="/placeholder.svg?height=32&width=32" alt="User" />
+                    <AvatarImage
+                      src="/placeholder.svg?height=32&width=32"
+                      alt="User"
+                    />
                     <AvatarFallback className="rounded-lg bg-gradient-to-br from-theme-orange-500 to-theme-yellow-500 text-white font-semibold">
                       JD
                     </AvatarFallback>
                   </Avatar>
                   <div className="grid flex-1 text-left text-sm leading-tight">
-                    <span className="truncate font-semibold">John Doe</span>
-                    <span className="truncate text-xs text-muted-foreground">john@example.com</span>
+                    <span className="truncate font-semibold">Dev Rajput</span>
+                    <span className="truncate text-xs text-muted-foreground">
+                      dev@example.com
+                    </span>
                   </div>
                 </SidebarMenuButton>
               </DropdownMenuTrigger>
@@ -211,5 +198,5 @@ export function AppSidebar() {
         </SidebarMenu>
       </SidebarFooter>
     </Sidebar>
-  )
+  );
 }
